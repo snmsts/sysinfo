@@ -1,5 +1,5 @@
 (uiop/package:define-package :sysinfo/posix (:nicknames) (:use :cl) (:shadow)
-                             (:export :arch :os :kernel-version) (:intern))
+                             (:export :arch :os :kernel-version :system) (:intern))
 (in-package :sysinfo/posix)
 ;;don't edit above
 
@@ -29,7 +29,7 @@
                          ((member *arch* '("armv5tejl") :test 'equal) "armel")
                          (t (substitute #\- #\_ *arch*))))))
 
-(defun *kernel-version* nil)
+(defvar *kernel-version* nil)
 (defun kernel-version ()
   (if *kernel-version*
       *kernel-version*
