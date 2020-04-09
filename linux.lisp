@@ -9,8 +9,8 @@
 ;; kernel-version
 
 ;; tbd functions
-;; dist type
-;; dist version
+;; product (dist)
+;; build (dist version)
 ;; libc type
 ;; libc version
 
